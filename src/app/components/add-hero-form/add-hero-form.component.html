@@ -1,0 +1,46 @@
+<div class="container bg-light mb-3">
+  <form *ngIf="visible" [formGroup]="addHeroForm" (ngSubmit)="onFormSubmit()">
+    <label for="real-name" class="form-label">Real name: </label>
+    <input
+      type="text"
+      id="real-name"
+      class="form-control"
+      formControlName="realName"
+    />
+
+    <label for="superhero-name" class="form-label">Superhero name: </label>
+    <input
+      type="text"
+      id="superhero-name"
+      class="form-control"
+      formControlName="superheroName"
+    />
+
+    <label for="image-url" class="form-label">Image URL:</label>
+    <input
+      type="text"
+      id="image-url"
+      class="form-control"
+      formControlName="imageUrl"
+    />
+
+    <label for="superpowers" class="form-label">Select superpowers:</label>
+    <select
+      class="form-select"
+      multiple
+      size="5"
+      formControlName="superpowerIds"
+    >
+      <option *ngFor="let superpower of allSuperpowers" [value]="superpower.id">
+        {{ superpower.name }}{{ " " + superpower.icon }}
+      </option>
+    </select>
+    <button
+      type="submit"
+      class="btn btn-info mt-3"
+      [disabled]="addHeroForm.invalid"
+    >
+      Add superhero
+    </button>
+  </form>
+</div>

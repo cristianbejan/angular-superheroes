@@ -1,16 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeroService } from './core/services/hero.service';
+import { HeroItemComponent } from './components/hero-item/hero-item.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SuperpowerCardComponent } from './components/superpower-card/superpower-card.component';
+import { AsignSuperpowerFormComponent } from './components/asign-superpower-form/asign-superpower-form.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AddHeroFormComponent } from './components/add-hero-form/add-hero-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent,
+    HeroItemComponent,
+    SuperpowerCardComponent,
+    AsignSuperpowerFormComponent,
+    HeaderComponent,
+    AddHeroFormComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HeroService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

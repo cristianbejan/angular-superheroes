@@ -1,0 +1,14 @@
+<div class="container-fluid mt-3 bg-light">
+  <app-header
+    [allSuperpowers]="allSuperpowers"
+    (addingNewHero)="addNewSuperhero($event)"
+  ></app-header>
+  <div class="card-group justify-content-center">
+    <app-hero-item
+      *ngFor="let hero of heroes"
+      [hero]="hero"
+      [allSuperpowers]="allSuperpowers"
+      (deleteSuperhero)="deleteHero($event)"
+    ></app-hero-item>
+  </div>
+</div>

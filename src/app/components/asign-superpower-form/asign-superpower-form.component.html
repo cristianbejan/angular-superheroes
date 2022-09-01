@@ -1,0 +1,23 @@
+<form *ngIf="visible" class="d-flex flex-column">
+  <select
+    class="form-select form-select-sm mt-3 overflow-hidden"
+    [size]="notAssignedSuperpowers.length"
+    multiple
+    [formControl]="newSuperpowers"
+  >
+    <option
+      *ngFor="let superpower of notAssignedSuperpowers"
+      [value]="superpower.id"
+    >
+      {{ superpower.name }}{{ " " + superpower.icon }}
+    </option>
+  </select>
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-sm mt-3 align-self-end"
+    [disabled]="newSuperpowers.invalid"
+    (click)="onAddNewSuperpowersToHero()"
+  >
+    Add to hero
+  </button>
+</form>
