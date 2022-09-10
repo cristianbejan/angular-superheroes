@@ -39,8 +39,15 @@ export class HeroesComponent implements OnInit {
     if (confirm('Are you sure?') === true) {
       this.heroService.deleteHero(hero).subscribe(() => {
         this.getSuperheroes();
-        this.getAllSuperpowers();
       });
     }
+
+    //    if (confirm('Are you sure?') === true) {
+    //     this.heroService.deleteHero(hero).subscribe(() => {
+    //       this.heroStore.deleteHero(hero.id);
+    //       this.getSuperheroes();
+    //     });
+    //   }
+    // }
   }
 }

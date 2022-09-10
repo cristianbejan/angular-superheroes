@@ -52,4 +52,9 @@ export class HeroService {
 
     return this.http.post<Hero>(url, payload, httpOptions);
   }
+
+  updateHero(payload: Hero, id: number): Observable<Hero> {
+    const url = `${this.baseUrl}/heroes/${id}`;
+    return this.http.patch<Hero>(url, payload, httpOptions);
+  }
 }

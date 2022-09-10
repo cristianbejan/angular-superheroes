@@ -22,6 +22,7 @@ export class HeroItemComponent implements OnInit {
   }
 
   @Output() deleteSuperhero: EventEmitter<Hero> = new EventEmitter();
+  @Output() onEditSuperheroEvent: EventEmitter<any> = new EventEmitter();
 
   get allSuperpowers(): Superpower[] {
     return this._allSuperpowers;

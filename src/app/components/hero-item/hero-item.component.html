@@ -29,12 +29,21 @@
     ></app-superpower-card>
   </div>
 
-  <button
-    type="button"
-    class="btn btn-outline-danger btn-sm align-self-center mb-2"
-    style="max-width: 50%"
-    (click)="onDelete(hero)"
-  >
-    Delete superhero
-  </button>
+  <div class="container d-flex mb-2 gap-2 justify-content-end">
+    <button
+      type="button"
+      class="btn btn-outline-danger btn-sm"
+      style="max-width: 50%"
+      (click)="onDelete(hero)"
+    >
+      Delete
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-warning btn-sm"
+      style="max-width: 50%"
+    >
+      Edit
+    </button>
+  </div>
 </div>
