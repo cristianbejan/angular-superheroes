@@ -22,7 +22,7 @@ export class HeroItemComponent implements OnInit {
   }
 
   @Output() deleteSuperhero: EventEmitter<Hero> = new EventEmitter();
-  @Output() onEditSuperheroEvent: EventEmitter<any> = new EventEmitter();
+  @Output() editSuperhero: EventEmitter<any> = new EventEmitter();
 
   get allSuperpowers(): Superpower[] {
     return this._allSuperpowers;
@@ -92,7 +92,11 @@ export class HeroItemComponent implements OnInit {
       });
   }
 
-  onDelete(hero: Hero) {
-    this.deleteSuperhero.emit(hero);
+  onDelete() {
+    this.deleteSuperhero.emit(this.hero);
+  }
+
+  onEdit() {
+    this.editSuperhero.emit(this.hero);
   }
 }

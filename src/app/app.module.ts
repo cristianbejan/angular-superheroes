@@ -12,6 +12,7 @@ import { SuperpowerCardComponent } from './components/superpower-card/superpower
 import { AsignSuperpowerFormComponent } from './components/asign-superpower-form/asign-superpower-form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddHeroFormComponent } from './components/add-hero-form/add-hero-form.component';
+import { HeroStoreService } from './store/hero-store.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AddHeroFormComponent } from './components/add-hero-form/add-hero-form.c
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [HeroService],
+  providers: [HeroService, HeroStoreService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,7 +1,9 @@
 <div class="container-fluid mt-3 bg-light">
+  <!-- (addingNewHero)="addNewSuperhero($event)" -->
   <app-header
     [allSuperpowers]="allSuperpowers"
-    (addingNewHero)="addNewSuperhero($event)"
+    [heroToBeEdited]="heroToBeEdited"
+    (close)="onFormClose()"
   ></app-header>
   <div class="card-group justify-content-center">
     <app-hero-item
@@ -9,6 +11,7 @@
       [hero]="hero"
       [allSuperpowers]="allSuperpowers"
       (deleteSuperhero)="deleteHero($event)"
+      (editSuperhero)="editHero($event)"
     ></app-hero-item>
   </div>
 </div>
