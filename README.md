@@ -1,5 +1,8 @@
 # Superheroes
 
+![Screenshot _ Superheroes](https://user-images.githubusercontent.com/55949610/193901000-0e75c47f-60e1-4ec7-9810-42690d6e5816.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 ## Development server
